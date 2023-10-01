@@ -15,6 +15,7 @@ struct Post: Identifiable {
     let title: String
     let abbreviation: String
     let imageName: String?
+    let imageLink: String?
     let rank: Int
     let priceUSD: Double
     let priceChange1h: Double
@@ -31,6 +32,7 @@ extension Post {
     static var bitcoin = Post(title: "Bitcoin",
                               abbreviation: "BTC",
                               imageName: "Bitcoin",
+                              imageLink: nil,
                               rank: 1,
                               priceUSD: 27182.60,
                               priceChange1h: -0.03,
@@ -43,6 +45,7 @@ extension Post {
     static var etherium = Post(title: "Etherium",
                                abbreviation: "ETH",
                                imageName: "Etherium",
+                               imageLink: nil,
                                rank: 2,
                                priceUSD:  1685.56,
                                priceChange1h: -0.16,
@@ -55,6 +58,7 @@ extension Post {
     static var tether = Post(title: "Tether",
                              abbreviation: "USDT",
                              imageName: "Tether",
+                             imageLink: nil,
                              rank: 3,
                              priceUSD: 1.001968,
                              priceChange1h: -0.03,
