@@ -11,6 +11,12 @@
 		EC768F3E2AC9932600B22420 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC768F3D2AC9932600B22420 /* ContentView.swift */; };
 		EC768F402AC9932700B22420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC768F3F2AC9932700B22420 /* Assets.xcassets */; };
 		EC768F432AC9932700B22420 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC768F422AC9932700B22420 /* Preview Assets.xcassets */; };
+		EC768F4A2AC9974300B22420 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC768F492AC9974300B22420 /* Post.swift */; };
+		EC768F4C2AC99E3400B22420 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC768F4B2AC99E3400B22420 /* InfoView.swift */; };
+		EC768F4E2AC9A29100B22420 /* InfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC768F4D2AC9A29100B22420 /* InfoRowView.swift */; };
+		EC768F502AC9ABDC00B22420 /* InfoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC768F4F2AC9ABDC00B22420 /* InfoDetailsView.swift */; };
+		EC768F532AC9B4C800B22420 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC768F552AC9B4C800B22420 /* Localizable.strings */; };
+		EC768F582AC9B51400B22420 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC768F572AC9B51400B22420 /* String+Localized.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,13 @@
 		EC768F3D2AC9932600B22420 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC768F3F2AC9932700B22420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC768F422AC9932700B22420 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC768F492AC9974300B22420 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		EC768F4B2AC99E3400B22420 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		EC768F4D2AC9A29100B22420 /* InfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRowView.swift; sourceTree = "<group>"; };
+		EC768F4F2AC9ABDC00B22420 /* InfoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailsView.swift; sourceTree = "<group>"; };
+		EC768F542AC9B4C800B22420 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EC768F562AC9B4CC00B22420 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EC768F572AC9B51400B22420 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +66,14 @@
 			children = (
 				EC768F3B2AC9932600B22420 /* CoinWatchApp.swift */,
 				EC768F3D2AC9932600B22420 /* ContentView.swift */,
+				EC768F4F2AC9ABDC00B22420 /* InfoDetailsView.swift */,
+				EC768F4B2AC99E3400B22420 /* InfoView.swift */,
+				EC768F552AC9B4C800B22420 /* Localizable.strings */,
+				EC768F4D2AC9A29100B22420 /* InfoRowView.swift */,
 				EC768F3F2AC9932700B22420 /* Assets.xcassets */,
 				EC768F412AC9932700B22420 /* Preview Content */,
+				EC768F492AC9974300B22420 /* Post.swift */,
+				EC768F572AC9B51400B22420 /* String+Localized.swift */,
 			);
 			path = CoinWatch;
 			sourceTree = "<group>";
@@ -109,6 +128,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = EC768F2F2AC9932600B22420;
 			productRefGroup = EC768F392AC9932600B22420 /* Products */;
@@ -126,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC768F432AC9932700B22420 /* Preview Assets.xcassets in Resources */,
+				EC768F532AC9B4C800B22420 /* Localizable.strings in Resources */,
 				EC768F402AC9932700B22420 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,12 +158,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC768F4A2AC9974300B22420 /* Post.swift in Sources */,
 				EC768F3E2AC9932600B22420 /* ContentView.swift in Sources */,
+				EC768F4C2AC99E3400B22420 /* InfoView.swift in Sources */,
+				EC768F502AC9ABDC00B22420 /* InfoDetailsView.swift in Sources */,
+				EC768F582AC9B51400B22420 /* String+Localized.swift in Sources */,
 				EC768F3C2AC9932600B22420 /* CoinWatchApp.swift in Sources */,
+				EC768F4E2AC9A29100B22420 /* InfoRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC768F552AC9B4C800B22420 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC768F542AC9B4C800B22420 /* en */,
+				EC768F562AC9B4CC00B22420 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EC768F442AC9932700B22420 /* Debug */ = {
