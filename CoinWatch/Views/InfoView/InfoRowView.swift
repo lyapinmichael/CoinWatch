@@ -19,6 +19,15 @@ struct InfoRowView: View {
                     .frame(width: 44, height: 44)
                     .aspectRatio(contentMode: .fit)
                     .clipped()
+            } else if let imageLink = post.imageLink {
+                AsyncImage(url: imageLink) { image in
+                    image.resizable()
+                        .frame(width: 44, height: 44)
+                        .aspectRatio(contentMode: .fit)
+                        .clipped()
+                } placeholder: {
+                    ProgressView()
+                }
             } else {
                 Image(systemName: "questionmark.circle")
                     .resizable()
@@ -32,7 +41,7 @@ struct InfoRowView: View {
             Text(post.title)
                 .font(.system(size: 22))
                 .fontWeight(.regular)
-
+            
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }

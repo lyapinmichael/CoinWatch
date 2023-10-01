@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  CoinWatch
+
+  Created by Ляпин Михаил on 01.10.2023.
+  
+*/
+
+"Price" = "Цена";
+"Rank" = "Место";
+"Price" = "Цена";
+"PriceChange1h" = "Изменение цены за 1 час";
+"PriceChange1d" = "Изменение цены за 1 день";
+"PriceChange1w" = "Изменение цены за 1 неделю";
+"PriceBTC" = "Курс к BTC";
+"MarketCap" = "Рыночная капитализациая";
+"AvaliableSupply" = "Доступно";

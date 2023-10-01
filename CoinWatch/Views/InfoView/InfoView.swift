@@ -9,23 +9,41 @@ import SwiftUI
 
 struct InfoView: View {
     
+    @State private var posts: [Post] = Post.testArray
+    
+    private var networkService = NetworkService()
+    
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    List(Post.testArray) { post in
+                    List(posts) { post in
                         NavigationLink {
                             InfoDetailsView(post: post)
                         } label: {
                             InfoRowView(post: post)
                         }
                     }
+                    .task {
+                        await requestTopCoins()
+                    }
                 }
             }
             .navigationTitle("Top Coins")
-          
         }
-        
+    }
+    
+    private func requestTopCoins() async {
+        networkService.requestTopCoins { result in
+            
+            switch result {
+            case .success(let posts):
+                self.posts = posts
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
     }
 }
 

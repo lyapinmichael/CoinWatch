@@ -19,6 +19,7 @@
 		EC768F582AC9B51400B22420 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC768F572AC9B51400B22420 /* String+Localized.swift */; };
 		ECF048D22AC9C44A0076B3D4 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF048D12AC9C44A0076B3D4 /* HelloView.swift */; };
 		ECF048D42AC9C5380076B3D4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF048D32AC9C5380076B3D4 /* SettingsView.swift */; };
+		ECF048DF2AC9D3DE0076B3D4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF048DE2AC9D3DE0076B3D4 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		EC768F572AC9B51400B22420 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		ECF048D12AC9C44A0076B3D4 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
 		ECF048D32AC9C5380076B3D4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		ECF048DE2AC9D3DE0076B3D4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,16 +72,13 @@
 			children = (
 				EC768F3B2AC9932600B22420 /* CoinWatchApp.swift */,
 				EC768F3D2AC9932600B22420 /* ContentView.swift */,
-				EC768F4B2AC99E3400B22420 /* InfoView.swift */,
-				EC768F4D2AC9A29100B22420 /* InfoRowView.swift */,
-				EC768F4F2AC9ABDC00B22420 /* InfoDetailsView.swift */,
-				ECF048D12AC9C44A0076B3D4 /* HelloView.swift */,
-				ECF048D32AC9C5380076B3D4 /* SettingsView.swift */,
+				ECF048DD2AC9D3C70076B3D4 /* Services */,
+				ECF048DC2AC9D3BD0076B3D4 /* Extensions */,
+				ECF048DB2AC9D3AD0076B3D4 /* Models */,
+				ECF048D92AC9D37D0076B3D4 /* Views */,
 				EC768F552AC9B4C800B22420 /* Localizable.strings */,
 				EC768F3F2AC9932700B22420 /* Assets.xcassets */,
 				EC768F412AC9932700B22420 /* Preview Content */,
-				EC768F492AC9974300B22420 /* Post.swift */,
-				EC768F572AC9B51400B22420 /* String+Localized.swift */,
 			);
 			path = CoinWatch;
 			sourceTree = "<group>";
@@ -90,6 +89,50 @@
 				EC768F422AC9932700B22420 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ECF048D92AC9D37D0076B3D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECF048DA2AC9D3950076B3D4 /* InfoView */,
+				ECF048D12AC9C44A0076B3D4 /* HelloView.swift */,
+				ECF048D32AC9C5380076B3D4 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECF048DA2AC9D3950076B3D4 /* InfoView */ = {
+			isa = PBXGroup;
+			children = (
+				EC768F4B2AC99E3400B22420 /* InfoView.swift */,
+				EC768F4D2AC9A29100B22420 /* InfoRowView.swift */,
+				EC768F4F2AC9ABDC00B22420 /* InfoDetailsView.swift */,
+			);
+			path = InfoView;
+			sourceTree = "<group>";
+		};
+		ECF048DB2AC9D3AD0076B3D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC768F492AC9974300B22420 /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECF048DC2AC9D3BD0076B3D4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EC768F572AC9B51400B22420 /* String+Localized.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ECF048DD2AC9D3C70076B3D4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ECF048DE2AC9D3DE0076B3D4 /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF048DF2AC9D3DE0076B3D4 /* NetworkService.swift in Sources */,
 				EC768F4A2AC9974300B22420 /* Post.swift in Sources */,
 				ECF048D22AC9C44A0076B3D4 /* HelloView.swift in Sources */,
 				EC768F3E2AC9932600B22420 /* ContentView.swift in Sources */,

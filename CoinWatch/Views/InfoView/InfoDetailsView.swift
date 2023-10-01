@@ -21,7 +21,7 @@ struct InfoDetailsView: View {
                 Text("PriceChange1w".localized + ":\t" + "\(post.priceChange1w)")
                 Text("PriceBTC".localized + ":\tBTC " + "\(post.priceBTC)")
                 Text("MarketCap".localized + ":\t$" + "\(post.marketCap)")
-                Text("AvaliableSupply".localized + ":\t$" + "\(post.avaliableSupply)")
+                Text("AvaliableSupply".localized + ":\t$" + "\(post.availableSupply)")
                 
                     
             }
