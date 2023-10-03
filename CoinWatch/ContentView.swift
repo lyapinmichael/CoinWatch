@@ -9,19 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var isTitleOn: Bool = true
+    
     var body: some View {
         TabView {
-            InfoView()
+            InfoView(isTitleOn: isTitleOn)
                 .tabItem {
                     Label("Info", systemImage: "info.circle")
                 }
+                
             
             HelloView()
                 .tabItem {
                     Label("Hello", systemImage: "globe")
                 }
             
-            SettingsView()
+            SettingsView(isTitleOn: $isTitleOn)
                 .tabItem {
                     Label("Settins", systemImage: "gear")
                 }

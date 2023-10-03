@@ -9,7 +9,17 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @State var isToggleOn: Bool = false
+    @Environment(\.colorScheme) var colorScheme
+    private var themeMessage: String {
+        if colorScheme == .light {
+            return "LightTheme".localized
+        } else {
+            return "DarkTheme".localized
+        }
+    }
+    
+    @Binding var isTitleOn: Bool
+    
     @State var selectedCurrency = "USD"
     @State var sliderValue = 0.5
     
@@ -18,11 +28,13 @@ struct SettingsView: View {
     var body: some View {
         Form {
             Section("Theme") {
-                Toggle("Theme", isOn: $isToggleOn)
+                Text(themeMessage)
             }
             
             Section("Options") {
-               
+                Toggle("NaviagtionTitle".localized, isOn: $isTitleOn)
+                Text(isTitleOn ? "NavigationTitleOn".localized : "NavigationTitleOff".localized)
+                
                 Picker("Preferred fiat currency", selection: $selectedCurrency) {
                     ForEach(currencies, id: \.self) {
                         Text($0)
@@ -40,6 +52,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(isTitleOn: .constant(false))
     }
 }

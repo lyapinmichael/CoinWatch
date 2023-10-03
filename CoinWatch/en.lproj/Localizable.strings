@@ -15,3 +15,6 @@
 "PriceBTC" = "Price in BTC";
 "MarketCap" = "Market Capitalization";
 "AvaliableSupply" = "Avaliable supply";
+"LightTheme" = "Light theme enabled";
+"DarkTheme" = "Dark theme enabled";
+

@@ -15,3 +15,5 @@
 "PriceBTC" = "Курс к BTC";
 "MarketCap" = "Рыночная капитализациая";
 "AvaliableSupply" = "Доступно";
+"LightTheme" = "Светлая тема выбрана";
+"DarkTheme" = "Темная тема выбрана";
