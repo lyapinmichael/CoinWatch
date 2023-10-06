@@ -19,9 +19,10 @@ struct SettingsView: View {
     }
     
     @Binding var isTitleOn: Bool
+    @Binding var sliderValue: Double
     
     @State var selectedCurrency = "USD"
-    @State var sliderValue = 0.5
+    
     
     var currencies = ["USD", "EUR", "RUB", "BYN"]
     
@@ -32,18 +33,32 @@ struct SettingsView: View {
             }
             
             Section("Options") {
-                Toggle("NaviagtionTitle".localized, isOn: $isTitleOn)
-                Text(isTitleOn ? "NavigationTitleOn".localized : "NavigationTitleOff".localized)
                 
-                Picker("Preferred fiat currency", selection: $selectedCurrency) {
+                VStack(alignment: .leading) {
+                    Toggle("NaviagtionTitle".localized, isOn: $isTitleOn)
+                    
+                    Text(isTitleOn ? "NavigationTitleOn".localized : "NavigationTitleOff".localized)
+                }
+                
+                Picker("PreferredFiat".localized, selection: $selectedCurrency) {
                     ForEach(currencies, id: \.self) {
                         Text($0)
                     }
                 }
                 .pickerStyle(.menu)
                 
-                Slider(value: $sliderValue)
-            
+                VStack(alignment: .leading) {
+                    
+                    HStack {
+                        Text("ListRowHeight".localized + ":")
+                        Spacer()
+                        Text(String(format: "%.f", sliderValue * 100))
+                            .foregroundColor(.blue)
+                    }
+                    
+                    
+                    Slider(value: $sliderValue, in: 0.44...1)
+                }
             }
             
         }
@@ -52,6 +67,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(isTitleOn: .constant(false))
+        SettingsView(isTitleOn: .constant(false), sliderValue: .constant(0.5))
     }
 }

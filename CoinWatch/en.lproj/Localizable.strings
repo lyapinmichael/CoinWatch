@@ -17,4 +17,9 @@
 "AvaliableSupply" = "Avaliable supply";
 "LightTheme" = "Light theme enabled";
 "DarkTheme" = "Dark theme enabled";
+"NaviagtionTitle" = "Show navigation title";
+"NavigationTitleOn" = "Navigation title is shown";
+"NavigationTitleOff" = "Navigation title is hidden";
+"PreferredFiat" = "Preferred fiat currency";
+"ListRowHeight" = "Preferred list row height";
 

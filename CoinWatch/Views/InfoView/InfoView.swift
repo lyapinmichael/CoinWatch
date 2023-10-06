@@ -13,16 +13,18 @@ struct InfoView: View {
     
     private var isTitleOn: Bool
     private var networkService: NetworkService
+    private var rowHeight: Double
     
     //
     // Custom public init is needed to avoid error occured because some
     // of the properties have default value, so compiler complains that
     // init is inaccessable due to private restriction.
     //
-    init(posts: [Post] = Post.testArray, networkService: NetworkService = NetworkService(), isTitleOn: Bool = true) {
+    init(posts: [Post] = Post.testArray, networkService: NetworkService = NetworkService(), isTitleOn: Bool = true, rowHeight: Double = 0.44) {
         self.posts = posts
         self.networkService = networkService
         self.isTitleOn = isTitleOn
+        self.rowHeight = rowHeight
     }
     
     var body: some View {
@@ -34,6 +36,7 @@ struct InfoView: View {
                             InfoDetailsView(post: post)
                         } label: {
                             InfoRowView(post: post)
+                                .frame(height: rowHeight * 100)
                         }
                     }
                 }
