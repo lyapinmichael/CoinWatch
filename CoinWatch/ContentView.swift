@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        InfoView()
+        TabView {
+            InfoView()
+                .tabItem {
+                    Label("Info", systemImage: "info.circle")
+                }
+            
+            HelloView()
+                .tabItem {
+                    Label("Hello", systemImage: "globe")
+                }
+            
+            SettingsView()
+                .tabItem {
+                    Label("Settins", systemImage: "gear")
+                }
+            
+        }
     }
 }
 
