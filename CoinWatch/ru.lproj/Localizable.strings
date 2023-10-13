@@ -15,3 +15,10 @@
 "PriceBTC" = "Курс к BTC";
 "MarketCap" = "Рыночная капитализациая";
 "AvaliableSupply" = "Доступно";
+"LightTheme" = "Светлая тема выбрана";
+"DarkTheme" = "Темная тема выбрана";
+"NaviagtionTitle" = "Показывать строку навигации";
+"NavigationTitleOn" = "Строка навигации показывается";
+"NavigationTitleOff" = "Строка навигации скрыта";
+"PreferredFiat" = "Предпочтительная фиатная валюта";
+"ListRowHeight" = "Предпочтительная высота сроки в списке";

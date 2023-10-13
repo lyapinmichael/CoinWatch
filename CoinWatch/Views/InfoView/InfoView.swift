@@ -9,9 +9,23 @@ import SwiftUI
 
 struct InfoView: View {
     
-    @State private var posts: [Post] = Post.testArray
+   @State private var posts: [Post]
     
-    private var networkService = NetworkService()
+    private var isTitleOn: Bool
+    private var networkService: NetworkService
+    private var rowHeight: Double
+    
+    //
+    // Custom public init is needed to avoid error occured because some
+    // of the properties have default value, so compiler complains that
+    // init is inaccessable due to private restriction.
+    //
+    init(posts: [Post] = Post.testArray, networkService: NetworkService = NetworkService(), isTitleOn: Bool = true, rowHeight: Double = 0.44) {
+        self.posts = posts
+        self.networkService = networkService
+        self.isTitleOn = isTitleOn
+        self.rowHeight = rowHeight
+    }
     
     var body: some View {
         NavigationView {
@@ -22,14 +36,18 @@ struct InfoView: View {
                             InfoDetailsView(post: post)
                         } label: {
                             InfoRowView(post: post)
+                                .frame(height: rowHeight * 100)
                         }
-                    }
-                    .task {
-                        await requestTopCoins()
                     }
                 }
             }
             .navigationTitle("Top Coins")
+            .toolbar(isTitleOn ? .visible : .hidden, for: .navigationBar)
+        }
+        .onAppear {
+            Task {
+                await requestTopCoins()
+            }
         }
     }
     
